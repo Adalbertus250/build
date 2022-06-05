@@ -1,8 +1,7 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "styles/tailwind.css"
+import {AppProps} from "next/app";
+import Preloader from "components/preloader"
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+export default function MWApp({Component, pageProps}: AppProps){
+    return <Preloader><Component {...pageProps} /></Preloader>
 }
-
-export default MyApp
